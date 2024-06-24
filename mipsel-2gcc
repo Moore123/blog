@@ -1,0 +1,26 @@
+export CC=mipsel-linux-gnu-gcc BUILD_CC=gcc AR=mipsel-linux-gnu-ar RANLIB=mipsel-linux-gnu-ranlib 
+
+../configure                        \
+    --target=mipsel-linux-gnu       \
+    --prefix=/usr/local/workroot/usr    \
+    --with-glibc-version=2.19       \
+    --with-sysroot=/usr/local/workroot   \
+    --with-newlib                   \
+    --with-local-prefix=/usr/local/workroot/usr/local \
+    --with-native-system-header-dir=/usr/local/workroot/usr/include \
+    --disable-nls                   \
+    --disable-shared                \
+    --disable-bootstrap             \
+    --disable-multilib              \
+    --disable-decimal-float         \
+    --disable-threads               \
+    --disable-libatomic             \
+    --disable-libgomp               \
+    --disable-libquadmath           \
+    --disable-libssp                \
+    --disable-libvtv                \
+    --disable-libstdcxx             \
+    --enable-languages=c,c++        \
+    --enable-year2038                  \
+    --disable-lto                      \
+    --disable-sjlj-exceptions 
